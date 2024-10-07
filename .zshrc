@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/Users/mac/.zsh/completions:"* ]]; then export FPATH="/Users/mac/.zsh/completions:$FPATH"; fi
 # Amazon Q pre block. Keep at the top of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
@@ -144,6 +146,8 @@ alias vi="nvim"
 # Zig Aliases
 alias zbr="zig build run"
 
+alias tclear="clear && tmux clear-history"
+
 
 # ipaddress aliases
 alias ip_list="ipconfig getiflist"
@@ -151,3 +155,7 @@ alias ip_address="ipconfig getifaddr"
 
 # Kubernetes
 alias k="kubectl"
+. "/Users/mac/.deno/env"
+# Initialize zsh completions (added by deno install script)
+autoload -Uz compinit
+compinit
