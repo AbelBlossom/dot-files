@@ -1,0 +1,13 @@
+*
+!.config/
+!.config/alacritty/
+!.config/skhd/
+!.config/yabai/
+!.zshrc
+!.config/zed
+!.config/zed/keymap.json
+!.config/zed/settings.json
+!.config/alacritty/alacritty.yml
+!.config/skhd/skhdrc
+!.config/yabai/yabairc
+!.gitignore

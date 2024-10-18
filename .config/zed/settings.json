@@ -1,0 +1,105 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "assistant": {
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-4o-mini"
+    },
+    "version": "2"
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "copilot": {
+    "disabled_globs": [".env"]
+  },
+  "terminal": {
+    "line_height": "standard"
+  },
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+  "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "always",
+    "toggle_relative_line_numbers": true
+  },
+  "gutter": {
+    "line_numbers": true,
+    "code_actions": false,
+    "folds": false,
+    "runnables": false
+  },
+  "cursor_blink": false,
+  "scrollbar": {
+    "show": "never"
+  },
+  "relative_line_numbers": true,
+  "theme": "Gruvbox Dark Hard",
+  "base_keymap": "VSCode",
+  "ui_font_size": 15,
+  "buffer_font_size": 13,
+  "tab_size": 2,
+  "tab_bar": {
+    "show": true
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false
+  },
+  "format_on_save": "on",
+  "languages": {
+    "Python": {
+      "language_servers": ["ruff"],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    },
+    "TSX": {
+      "format_on_save": "on",
+      "language_servers": ["vtsls", "biome"],
+      "formatter": [
+        {
+          "language_server": {
+            "name": "biome"
+          }
+        }
+      ]
+    },
+    "TypeScript": {
+      "format_on_save": "on",
+      "language_servers": ["vtsls", "biome"],
+      "formatter": [
+        {
+          "language_server": {
+            "name": "biome"
+          }
+        }
+      ]
+    }
+  },
+  "language_overrides": {
+    "Go": {
+      "format_on_save": {
+        "external": {
+          "command": "gofmt",
+          "arguments": []
+        }
+      }
+    }
+  },
+  "buffer_line_height": "standard"
+}
