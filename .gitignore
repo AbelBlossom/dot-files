@@ -3,6 +3,7 @@
 !.config/alacritty/
 !.config/skhd/
 !.config/yabai/
+!.config/kitty/
 !.zshrc
 !.config/zed
 !.config/zed/keymap.json
@@ -10,4 +11,5 @@
 !.config/alacritty/alacritty.yml
 !.config/skhd/skhdrc
 !.config/yabai/yabairc
+!.config/kitty/*
 !.gitignore
