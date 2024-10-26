@@ -58,7 +58,7 @@
   "format_on_save": "on",
   "languages": {
     "Python": {
-      "language_servers": ["ruff"],
+      "language_servers": ["ruff", "pyright"],
       "format_on_save": "on",
       "formatter": [
         {
@@ -70,7 +70,7 @@
     },
     "TSX": {
       "format_on_save": "on",
-      "language_servers": ["vtsls", "biome"],
+      "language_servers": ["biome", "vtsls"],
       "formatter": [
         {
           "language_server": {
