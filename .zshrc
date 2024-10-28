@@ -104,10 +104,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH="$PATH:/Users/mac/development/flutter/bin"
-export PATH="$PATH:/Users/mac/Library/Android/sdk/emulator"
-export PATH="$PATH:/Users/mac/Library/Android/sdk/platform-tools"
-export PATH="$PATH:/Users/mac/Library/Android/sdk/tools"
+export PATH="$PATH:/Users/abel/development/flutter/bin"
+export PATH="$PATH:/Users/abel/Library/Android/sdk/emulator"
+export PATH="$PATH:/Users/abel/Library/Android/sdk/platform-tools"
+export PATH="$PATH:/Users/abel/Library/Android/sdk/tools"
 export PATH="$PATH:/usr/local/bin/"
 export PATH=~/.npm-global/bin:$PATH
 export PATH="$PATH:$(go env GOPATH)/bin"
@@ -136,8 +136,8 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 # Pyenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 # Vim Aliases
 alias vim="nvim"
@@ -155,7 +155,8 @@ alias ip_address="ipconfig getifaddr"
 
 # Kubernetes
 alias k="kubectl"
-. "/Users/mac/.deno/env"
 # Initialize zsh completions (added by deno install script)
-autoload -Uz compinit
+export PATH="$HOME/.deno/bin:$PATH"
+fpath=(~/.zsh/completion $fpath)
+autoload -U compinit
 compinit
