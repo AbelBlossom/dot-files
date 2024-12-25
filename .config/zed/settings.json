@@ -9,8 +9,8 @@
 {
   "assistant": {
     "default_model": {
-      "provider": "openai",
-      "model": "gpt-4o-mini"
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
     },
     "version": "2"
   },
@@ -21,7 +21,10 @@
     "disabled_globs": [".env"]
   },
   "terminal": {
-    "line_height": "standard"
+    "line_height": "standard",
+    "toolbar": {
+      "breadcrumbs": false
+    }
   },
   "telemetry": {
     "metrics": false,
@@ -43,10 +46,13 @@
     "show": "never"
   },
   "relative_line_numbers": true,
-  "theme": "Gruvbox Dark Hard",
+  "theme": "Catppuccin Mocha",
   "base_keymap": "VSCode",
   "ui_font_size": 15,
-  "buffer_font_size": 13,
+  "buffer_font_size": 14.2,
+  "buffer_font_family": "JetBrains Mono",
+  "ui_font_family": "Zed Plex Mono",
+  "unstable.ui_density": "compact",
   "tab_size": 2,
   "tab_bar": {
     "show": true

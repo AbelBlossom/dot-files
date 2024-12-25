@@ -153,6 +153,9 @@ alias tclear="clear && tmux clear-history"
 alias ip_list="ipconfig getiflist"
 alias ip_address="ipconfig getifaddr"
 
+# pocketbase
+export PATH="$HOME/.pocketbase/bin:$PATH"
+
 # Kubernetes
 alias k="kubectl"
 # Initialize zsh completions (added by deno install script)
@@ -160,3 +163,15 @@ export PATH="$HOME/.deno/bin:$PATH"
 fpath=(~/.zsh/completion $fpath)
 autoload -U compinit
 compinit
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+
+export EDITOR="nvim"
+# Yazi Config
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}

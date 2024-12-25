@@ -4,11 +4,14 @@
 !.config/skhd/
 !.config/yabai/
 !.config/kitty/
+!.config/alacritty
+!.config/alacritty/themes
 !.zshrc
 !.config/zed
 !.config/zed/keymap.json
 !.config/zed/settings.json
-!.config/alacritty/alacritty.yml
+!.config/alacritty/*
+!.config/alacritty/themes/*
 !.config/skhd/skhdrc
 !.config/yabai/yabairc
 !.config/kitty/*
