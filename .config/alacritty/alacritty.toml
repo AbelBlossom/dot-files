@@ -36,5 +36,5 @@ y = 5
 
 [general]
 import = [
-    "~/.config/alacritty/themes/catppuccin_mocha.toml"
+    "~/.config/alacritty/themes/gruvbox_material_hard_dark.toml"
 ]

@@ -113,6 +113,7 @@ export PATH=~/.npm-global/bin:$PATH
 export PATH="$PATH:$(go env GOPATH)/bin"
 export DOCKER_HUB_USERNAME="abelormanel"
 export DOCKER_HUB_PASSWORD="abel@docker??"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
@@ -166,12 +167,8 @@ compinit
 export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 
 export EDITOR="nvim"
-# Yazi Config
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#c2b6a1'
+# LazyGit Config
+export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
+
+
