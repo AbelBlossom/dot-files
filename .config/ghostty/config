@@ -1,0 +1,21 @@
+theme = light:GruvboxLightHard,dark:GruvboxDarkHard
+
+font-thicken = true
+
+font-size = 15
+cursor-style = block
+shell-integration-features = no-cursor
+
+# font-family = Cascadia Mono NF
+# font-family = JetBrains Mono NL
+
+adjust-cell-width = -0%
+adjust-cell-height = 0%
+
+keybind = cmd+shift+space=toggle_quick_terminal
+
+window-padding-x = 0
+window-padding-y = 0
+window-decoration = true
+confirm-close-surface = false
+window-padding-balance = true

@@ -7,6 +7,7 @@
 !.config/alacritty
 !.config/lazygit
 !.config/karabiner
+!.config/ghostty
 !.config/alacritty/themes
 !.zshrc
 !.config/zed
@@ -19,4 +20,5 @@
 !.config/kitty/*
 !.config/lazygit/*
 !.config/karabiner/*
+!.config/ghostty/*
 !.gitignore
