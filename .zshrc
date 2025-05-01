@@ -144,6 +144,8 @@ eval "$(zoxide init --cmd cd zsh)"
 alias vim="nvim"
 alias vi="nvim"
 
+export TERM=xterm-256color
+
 # Zig Aliases
 alias zbr="zig build run"
 
@@ -171,4 +173,6 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#c2b6a1'
 # LazyGit Config
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 
+export PATH="/usr/local/opt/libpq/bin:$PATH"
 
+source virtualenvwrapper.sh

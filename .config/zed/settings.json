@@ -7,6 +7,10 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "icon_theme": "Zed (Default)",
+  "features": {
+    "edit_prediction_provider": "supermaven"
+  },
   "assistant": {
     "default_model": {
       "provider": "copilot_chat",
@@ -46,10 +50,10 @@
     "show": "never"
   },
   "relative_line_numbers": true,
-  "theme": "Catppuccin Mocha",
+  "theme": "Gruvbox Dark Hard",
   "base_keymap": "VSCode",
   "ui_font_size": 15,
-  "buffer_font_size": 14.2,
+  "buffer_font_size": 15,
   "buffer_font_family": "JetBrains Mono",
   "ui_font_family": "Zed Plex Mono",
   "unstable.ui_density": "compact",
@@ -58,14 +62,15 @@
     "show": true
   },
   "toolbar": {
-    "breadcrumbs": false,
-    "quick_actions": false
+    "breadcrumbs": true,
+    "quick_actions": true
   },
   "format_on_save": "on",
   "languages": {
     "Python": {
       "language_servers": ["ruff", "pyright"],
       "format_on_save": "on",
+      "tab_size": 4,
       "formatter": [
         {
           "language_server": {
@@ -73,29 +78,29 @@
           }
         }
       ]
-    },
-    "TSX": {
-      "format_on_save": "on",
-      "language_servers": ["biome", "vtsls"],
-      "formatter": [
-        {
-          "language_server": {
-            "name": "biome"
-          }
-        }
-      ]
-    },
-    "TypeScript": {
-      "format_on_save": "on",
-      "language_servers": ["vtsls", "biome"],
-      "formatter": [
-        {
-          "language_server": {
-            "name": "biome"
-          }
-        }
-      ]
     }
+    // "TSX": {
+    //   "format_on_save": "on",
+    //   "language_servers": ["biome", "vtsls", "tailwindcss-language-server"],
+    //   "formatter": [
+    //     {
+    //       "language_server": {
+    //         "name": "biome"
+    //       }
+    //     }
+    //   ]
+    // },
+    // "TypeScript": {
+    //   "format_on_save": "on",
+    //   "language_servers": ["vtsls", "biome"],
+    //   "formatter": [
+    //     {
+    //       "language_server": {
+    //         "name": "biome"
+    //       }
+    //     }
+    //   ]
+    // }
   },
   "language_overrides": {
     "Go": {
