@@ -3,22 +3,24 @@
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
       "space f f": "file_finder::Toggle",
-      "space e e": "workspace::ToggleLeftDock",
-      "space e f": "workspace::ToggleLeftDock",
+      "space e e": "workspace::ToggleRightDock",
+      "space e f": "project_panel::ToggleFocus",
       "space s h": "pane::SplitDown",
       "space s v": "pane::SplitLeft",
       "space s m": "workspace::ToggleZoom",
       "space s x": "pane::CloseActiveItem",
+      "space c c": "agent::ToggleFocus",
+      "space x": "workspace::CloseAllDocks",
       "space f s": "pane::DeploySearch",
       "space c a": "editor::ToggleCodeActions",
       "space r n": "editor::Rename",
       "ctrl-]": "terminal_panel::ToggleFocus",
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-.": "pane::ActivateNextItem",
-      "ctrl-,": "pane::ActivatePrevItem"
+      "ctrl-,": "pane::ActivatePreviousItem"
     }
   },
   {
@@ -31,13 +33,13 @@
     "context": "Terminal",
     "bindings": {
       "ctrl-]": "workspace::ToggleBottomDock",
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
       "space s m": "workspace::ToggleZoom",
       "ctrl-.": "pane::ActivateNextItem",
-      "ctrl-,": "pane::ActivatePrevItem"
+      "ctrl-,": "pane::ActivatePreviousItem"
     }
   },
   {
@@ -57,12 +59,13 @@
   {
     "context": "Dock",
     "bindings": {
-      "space e f": "workspace::ToggleLeftDock",
+      "space e f": "workspace::ToggleRightDock",
       "space e e": "workspace::CloseAllDocks",
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+      "space x": "workspace::CloseAllDocks",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
       // "a": "project_panel::NewFile",
       // "c": "project_panel::Copy",
       // "p": "project_panel::Paste",

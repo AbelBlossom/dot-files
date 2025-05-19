@@ -119,8 +119,8 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/.serverless/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion# bun completions
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 [ -s "/Users/mac/.bun/_bun" ] && source "/Users/mac/.bun/_bun"
 
 # bun
@@ -175,4 +175,9 @@ export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
+
+export VIRTUALENVWRAPPER_PYTHON=/Users/abel/.virtualenvs/rose-api/bin/python
+
 source virtualenvwrapper.sh
+
+
