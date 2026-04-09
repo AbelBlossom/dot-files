@@ -1,0 +1,19 @@
+{
+  "name": "paperclip-agent-server",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "fastify": "^4.22.0",
+    "fastify-sensible": "^4.0.0",
+    "ajv": "^8.12.0"
+  },
+  "devDependencies": {
+    "vitest": "^0.34.0",
+    "supertest": "^6.3.3"
+  }
+}
