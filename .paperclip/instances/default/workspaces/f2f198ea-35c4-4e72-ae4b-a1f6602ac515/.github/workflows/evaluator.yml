@@ -1,0 +1,20 @@
+name: Evaluator (manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      submission_path:
+        description: 'Path to candidate submission inside repo (relative)'
+        required: true
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build evaluator image
+        run: |
+          docker build -t evaluator:ci server/tests/evaluator
+      - name: Run evaluator
+        run: |
+          docker run --rm -v ${{ github.workspace }}/${{ github.event.inputs.submission_path }}:/submission evaluator:ci /submission
