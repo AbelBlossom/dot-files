@@ -1,5 +1,4 @@
 import { describe, it, expect, beforeEach } from 'vitest'
-import request from 'supertest'
 import createServer from '../index.js'
 
 let app
@@ -22,15 +21,17 @@ describe('POST /api/agents', () => {
       }
     }
 
-    const res = await request(app.server).post('/api/agents').send(payload)
-    expect(res.status).toBe(201)
-    expect(res.body.agent).toBeDefined()
-    expect(res.body.agent.adapterConfig.cwd).toBe('/repo/workspace')
+    const res = await app.inject({ method: 'POST', url: '/api/agents', payload })
+    expect(res.statusCode).toBe(201)
+    const body = JSON.parse(res.payload)
+    expect(body.agent).toBeDefined()
+    expect(body.agent.adapterConfig.cwd).toBe('/repo/workspace')
     // verify listing endpoint
-    const list = await request(app.server).get('/api/companies/company_1/agents')
-    expect(list.status).toBe(200)
-    expect(list.body.agents).toHaveLength(1)
-    expect(list.body.agents[0].id).toBe(res.body.agent.id)
+    const listRes = await app.inject({ method: 'GET', url: '/api/companies/company_1/agents' })
+    expect(listRes.statusCode).toBe(200)
+    const listBody = JSON.parse(listRes.payload)
+    expect(listBody.agents).toHaveLength(1)
+    expect(listBody.agents[0].id).toBe(body.agent.id)
   })
 
   it('returns 400 if cwd missing for golang_dev_local', async () => {
@@ -41,8 +42,8 @@ describe('POST /api/agents', () => {
       adapterConfig: {}
     }
 
-    const res = await request(app.server).post('/api/agents').send(payload)
-    expect(res.status).toBe(400)
-    expect(res.text).toContain('adapterConfig.cwd is required')
+    const res = await app.inject({ method: 'POST', url: '/api/agents', payload })
+    expect(res.statusCode).toBe(400)
+    expect(res.payload).toContain('adapterConfig.cwd is required')
   })
 })

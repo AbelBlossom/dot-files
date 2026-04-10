@@ -5,11 +5,10 @@
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
-    "test": "vitest"
+    "test": "NO_SERVER_AUTO_START=1 NODE_ENV=test vitest --run"
   },
   "dependencies": {
     "fastify": "^4.22.0",
-    "fastify-sensible": "^4.0.0",
     "ajv": "^8.12.0"
   },
   "devDependencies": {
